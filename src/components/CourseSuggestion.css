@@ -1,0 +1,211 @@
+.course-suggestion {
+  text-align: center;
+  margin: 50px auto;
+  padding: 60px 40px;
+  max-width: 900px; /* Increased width */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.course-suggestion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 16px 30px rgba(0, 0, 0, 0.2);
+}
+
+.course-suggestion h2 {
+  font-size: 2.5rem;
+  color: #0d47a1;
+  font-weight: bold;
+  margin-bottom: 25px;
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+/* Buttons */
+.buttons-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  animation: slideUp 0.8s ease-in-out;
+}
+
+.field-btn {
+  background: linear-gradient(135deg, #ff7043, #d84315);
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.field-btn:hover {
+  background: linear-gradient(135deg, #e64a19, #bf360c);
+  transform: scale(1.06);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Glowing Effect on Hover */
+.field-btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  left: -100%;
+  transition: all 0.3s ease;
+}
+
+.field-btn:hover::before {
+  left: 100%;
+}
+
+/* Suggested Courses */
+.suggested-courses {
+  margin-top: 35px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.suggested-courses h3 {
+  font-size: 2rem;
+  color: #1565c0;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.suggested-courses ul {
+  list-style: none;
+  padding: 0;
+}
+
+.suggested-courses li {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 500;
+  margin-top: 10px;
+  position: relative;
+  padding-left: 25px;
+  animation: fadeInLeft 0.8s ease-in-out;
+}
+
+/* Bullet Point */
+.suggested-courses li::before {
+  content: "✔";
+  color: #ff5722;
+  position: absolute;
+  left: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Background Floating Animation */
+@keyframes backgroundWave {
+  0% { transform: translateX(-120px) translateY(15px); }
+  50% { transform: translateX(120px) translateY(-15px); }
+  100% { transform: translateX(-120px) translateY(15px); }
+}
+
+.course-suggestion::before,
+.course-suggestion::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(25, 118, 210, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+  animation: backgroundWave 6s infinite alternate ease-in-out;
+}
+
+.course-suggestion::before {
+  top: 30px;
+  left: -50px;
+}
+
+.course-suggestion::after {
+  bottom: 30px;
+  right: -50px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(25px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-25px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-25px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(15px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .course-suggestion {
+    max-width: 700px;
+    padding: 50px 30px;
+  }
+  
+  .course-suggestion h2 {
+    font-size: 2.2rem;
+  }
+  
+  .suggested-courses h3 {
+    font-size: 1.8rem;
+  }
+
+  .suggested-courses li {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-suggestion {
+    max-width: 90%;
+    padding: 40px 20px;
+  }
+
+  .course-suggestion h2 {
+    font-size: 2rem;
+  }
+
+  .field-btn {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+
+  .suggested-courses h3 {
+    font-size: 1.6rem;
+  }
+
+  .suggested-courses li {
+    font-size: 1.1rem;
+  }
+}

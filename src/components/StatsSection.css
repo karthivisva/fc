@@ -1,0 +1,36 @@
+.stats-section {
+    text-align: center;
+    margin: 50px 0;
+    padding: 40px 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+  }
+  
+  .stat-box h3 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 5px;
+  }
+  
+  .stat-box p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #555;
+  }
+  

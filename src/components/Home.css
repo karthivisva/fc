@@ -1,0 +1,242 @@
+/* General Home Section Styling */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Allow content to expand naturally */
+  min-height: 80vh; /* Ensures enough space for content */
+  padding: 20px;
+  margin-top: 90px; /* Reduced to prevent excessive spacing */
+  position: relative;
+  padding-bottom: 50px; /* Ensures footer does not overlap */
+}
+
+/* Image Styling */
+img {
+  image-rendering: crisp-edges; /* Sharp display */
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.home img {
+  width: 100%; /* Make it full-width */
+  max-width: none; /* Remove max-width limit */
+  max-height: none; /* Remove max-height limit */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures it covers the space properly */
+  border-radius: 0; /* Remove rounded edges to match Amazon/Flipkart */
+  box-shadow: none; /* Remove extra shadows for a clean look */
+}
+
+
+/* Dots Navigation */
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #bbb;
+  border-radius: 50%;
+  transition: background 0.3s ease-in-out;
+}
+
+.dot.active {
+  background: #307FDC;
+  transform: scale(1.2);
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Get Started Button */
+.button-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.get-started-btn {
+  background-color:#307FDC;
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.get-started-btn:hover {
+  background-color: #307FDC;
+  transform: scale(1.05);
+}
+
+/* Why Choose Section */
+.why-choose {
+  text-align: center;
+  margin-top: 30px; /* Reduced to prevent large spacing */
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #307FDC;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Make Footer Stay at Bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures full height */
+  margin: 0;
+}
+
+main {
+  flex-grow: 1; /* Pushes footer to bottom */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .home {
+    margin-top: 50px;
+  }
+
+  .home img {
+    width: 85%;
+    max-height: 500px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    margin-top: 100px;
+  }
+
+  .home img {
+    width: 95%;
+    max-height: 400px;
+  }
+
+  .get-started-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    margin-top: 150px;
+  }
+
+  .home img {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .get-started-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+/* Floating Email Button */
+.floating-email {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1976d2;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 1000;
+  font-size: 20px;
+  cursor: pointer;
+
+  /* Initial Animation - Fade-in & Slide-up */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-in-out forwards, pulseEffect 2s infinite ease-in-out;
+}
+
+/* Hover Animation - Slight Bounce Effect */
+.floating-email:hover {
+  background-color: #307FDC;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}

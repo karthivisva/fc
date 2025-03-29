@@ -1,0 +1,217 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #307FDC;
+  color: white;
+  padding: 15px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+  color: #ffdd57;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn, .register-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+/* Logout Button */
+.logout-btn {
+  background: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.logout-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+
+.login-btn {
+  background: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.login-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+.register-btn {
+  background: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+.register-btn:hover {
+  background: white;
+  color: #007bff;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Background Blur when Mobile Menu is Open */
+.blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 10;
+}
+
+.blur-overlay.show {
+  display: block;
+}
+
+/* Mobile Navigation */
+.nav-links-mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  gap: 20px;
+  width: 70%;
+  height: 100%;
+  background:transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  transition: right 0.5s ease-in-out;
+  z-index: 11;
+  
+  list-style: none;
+}
+
+.nav-links-mobile.show {
+  right: 0;
+}
+
+/* Mobile Links */
+.nav-links-mobile li a {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(255, 254, 254);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.nav-links-mobile li a:hover {
+  color: #ffdd57;
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Links Animation */
+.nav-links-mobile li {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.nav-links-mobile.show li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-links-mobile.show li:nth-child(1) { transition-delay: 0.1s; }
+.nav-links-mobile.show li:nth-child(2) { transition-delay: 0.2s; }
+.nav-links-mobile.show li:nth-child(3) { transition-delay: 0.3s; }
+.nav-links-mobile.show li:nth-child(4) { transition-delay: 0.4s; }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav-links, .auth-buttons {
+      display: none;
+  }
+  .menu-btn {
+      display: block;
+  }
+}

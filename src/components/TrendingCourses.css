@@ -1,0 +1,177 @@
+.trending-courses {
+  text-align: center;
+  margin: 50px 0;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f8f9fa 30%, #e3f2fd 100%);
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Improved heading style */
+.trending-courses h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ff5722, #ff9800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(255, 87, 34, 0.3);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Glowing effect on hover */
+.trending-courses h2:hover {
+  text-shadow: 4px 4px 10px rgba(255, 87, 34, 0.6);
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+/* Animated underline effect */
+.trending-courses h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #ff5722;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  transition: width 0.4s ease-in-out;
+}
+
+.trending-courses h2:hover::after {
+  width: 100%;
+}
+
+/* Pulsating glow effect behind the heading */
+.trending-courses h2::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 87, 34, 0.15);
+  border-radius: 50%;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  animation: pulseGlow 2s infinite alternate ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0.4;
+  }
+}
+
+/* Floating effect for course cards */
+@keyframes floatUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.course-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.course-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  width: 270px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatUp 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Animated underline on hover */
+.course-card h3 {
+  font-size: 1.7rem;
+  color: #007bff;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.course-card h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #ff5722;
+  transition: width 0.3s ease-in-out;
+  margin: auto;
+}
+
+.course-card:hover h3::after {
+  width: 100%;
+}
+
+.course-card p {
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Background floating animation */
+@keyframes backgroundWave {
+  0% { transform: translateX(-100px) translateY(10px); }
+  50% { transform: translateX(100px) translateY(-10px); }
+  100% { transform: translateX(-100px) translateY(10px); }
+}
+
+.trending-courses::before,
+.trending-courses::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 87, 34, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+  animation: backgroundWave 6s infinite alternate ease-in-out;
+}
+
+.trending-courses::before {
+  top: 20px;
+  left: -40px;
+}
+
+.trending-courses::after {
+  bottom: 20px;
+  right: -40px;
+}
+
+/* Fade In Animation */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

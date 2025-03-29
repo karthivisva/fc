@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:white;
+    padding: 20px;
+  }
+  
+  .calculator-card {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .title {
+    font-weight: bold;
+    color: #2a5298;
+    margin-bottom: 15px;
+  }
+  
+  .dropdown, .input-field {
+    margin-top: 10px !important;
+  }
+  
+  .calculate-btn {
+    margin-top: 15px !important;
+    background-color: #2a5298 !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 10px !important;
+    border-radius: 8px !important;
+  }
+  
+  .result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f0f8ff;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+  }
+  

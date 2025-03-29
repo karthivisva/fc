@@ -1,217 +1,277 @@
-/* Import Poppins Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* General Styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
-}
-
-/* Navbar Styles */
 .navbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  background: #307FDC;
+  background: linear-gradient(90deg, #007bff, #1780e9);
+  padding: 20px 20px;
   color: white;
-  padding: 15px 40px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: 1000;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Logo */
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-/* Desktop Navigation Links */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-}
-
-.nav-links li a:hover {
-  color: #ffdd57;
-}
-
-/* Auth Buttons */
-.auth-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.login-btn, .register-btn {
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-/* Logout Button */
-.logout-btn {
-  background: white;
-  color: #007bff;
-  border: 2px solid #007bff;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 25px;
-  text-decoration: none;
-  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
 
-/* Hover Effect */
-.logout-btn:hover {
-  background: #007bff;
+/* LOGO ANIMATION */
+.logo-container {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-container:hover {
+  transform: scale(1.1);
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  position: relative;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+/* Dynamic Hover Effect for Links */
+.nav-links li a {
+  text-decoration: none;
   color: white;
+  position: relative;
+  transition: color 0.3s ease-in-out, transform 0.2s;
 }
 
-
-.login-btn {
-  background: white;
-  color: #007bff;
-  border: 2px solid #007bff;
+/* **Gradient Color Change + Glow Effect** */
+.nav-links li:hover a {
+  background: linear-gradient(90deg, #ffcc00, #ff6600, #ff3333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 10px rgba(255, 204, 0, 0.7);
+  transform: scale(1.1);
 }
 
-.login-btn:hover {
-  background: #007bff;
-  color: white;
+/* **Shimmer Effect on Hover** */
+.nav-links li:hover {
+  animation: shimmer 0.5s ease-in-out;
 }
 
+@keyframes shimmer {
+  0% {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* **Floating Lift Effect on Hover** */
+.nav-links li:hover {
+  transform: translateY(-5px);
+}
+
+/* **Animated Underline with Gradient Glow** */
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffcc00, #ff6600, #ff3333);
+  bottom: -5px;
+  left: 50%;
+  transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* AUTH BUTTONS */
+.auth-buttons a,
+.login-btn,
 .register-btn {
-  background: white;
-  color: #007bff;
-  border: 2px solid #007bff;
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s;
 }
 
+.auth-buttons a,
+.login-btn,
+.register-btn {
+  background-color: white;
+  color: #ff3333;
+  font-weight: bold;
+  border-radius: 50px;
+  
+}
+.auth-buttons {
+  display: flex;
+  gap: 15px; 
+  /* Add space between Login and Register buttons */
+}
+.auth-buttons a:hover,
+.login-btn:hover,
 .register-btn:hover {
-  background: white;
-  color: #007bff;
+  background: rgb(1, 186, 237);
+  color: black;
+  transform: scale(1.1);
+ 
+ 
 }
 
-/* Mobile Menu Button */
+/* SIGNOUT BUTTON */
+.signout-btn {
+  background:#da0505;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s;
+}
+
+.signout-btn:hover {
+  background: linear-gradient(90deg, #e20000, #cc0000);
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.7);
+}
+
+/* MOBILE MENU ICON */
 .menu-btn {
   display: none;
-  font-size: 25px;
-  cursor: pointer;
-  color: white;
-}
-
-/* Background Blur when Mobile Menu is Open */
-.blur-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(8px);
-  background: rgba(0, 0, 0, 0.4);
-  display: none;
-  z-index: 10;
-}
-
-.blur-overlay.show {
-  display: block;
-}
-
-/* Mobile Navigation */
-.nav-links-mobile {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  gap: 20px;
-  width: 70%;
-  height: 100%;
-  background:transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 60px;
-  transition: right 0.5s ease-in-out;
-  z-index: 11;
-  
-  list-style: none;
-}
-
-.nav-links-mobile.show {
-  right: 0;
-}
-
-/* Mobile Links */
-.nav-links-mobile li a {
-  font-size: 20px;
-  font-weight: 600;
-  color: rgb(255, 254, 254);
-  text-decoration: none;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.nav-links-mobile li a:hover {
-  color: #ffdd57;
-  transform: scale(1.1) rotate(2deg);
-}
-
-/* Close Button */
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 30px;
-  color: #333;
+  font-size: 1.8rem;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
-.close-btn:hover {
-  transform: scale(1.1);
+.menu-btn:hover {
+  transform: rotate(10deg);
 }
 
-/* Mobile Links Animation */
-.nav-links-mobile li {
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-.nav-links-mobile.show li {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.nav-links-mobile.show li:nth-child(1) { transition-delay: 0.1s; }
-.nav-links-mobile.show li:nth-child(2) { transition-delay: 0.2s; }
-.nav-links-mobile.show li:nth-child(3) { transition-delay: 0.3s; }
-.nav-links-mobile.show li:nth-child(4) { transition-delay: 0.4s; }
-
-/* Responsive */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-  .nav-links, .auth-buttons {
-      display: none;
+  .nav-links {
+    display: none;
   }
+
+  .auth-section {
+    display: none;
+  }
+
   .menu-btn {
-      display: block;
+    display: block;
   }
+
+  /* MOBILE MENU ANIMATION */
+  .show-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background:transparent;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+    animation: slideIn 0.4s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* MOBILE NAV LINKS */
+  .show-menu li {
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .show-menu li:hover a {
+    color: #ffcc00;
+  }
+
+  /* MOBILE AUTH SECTION */
+  .mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* BLUR OVERLAY ANIMATION */
+.blur-overlay {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .blur-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    animation: fadeOverlay 0.3s ease-in-out;
+  }
+
+  @keyframes fadeOverlay {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.user-name {
+  color: white;
+  font-size: 1.1rem;
 }

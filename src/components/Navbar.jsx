@@ -1,99 +1,87 @@
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { auth } from "../firebase";
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { useUser, SignOutButton } from "@clerk/clerk-react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Swal from "sweetalert2";
+import { useState } from "react";
 import "../styles/Navbar.css";
-import logo from '../images/logo.png';
+import logo from "../images/logo.png";
 
 const Navbar = () => {
-  const [user, setUser] = useState(null);
+  const { isSignedIn, user } = useUser();
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-  }, []);
-
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      Swal.fire({
-        title: "Logged Out!",
-        text: "You have successfully logged out.",
-        icon: "success",
-        showConfirmButton: false,
-        timer: 2000,
-      });
-
-      setMenuOpen(false);
-    } catch (error) {
-      Swal.fire({
-        title: "Logout Failed!",
-        text: error.message,
-        icon: "error",
-      });
+  const handleProtectedClick = (path) => {
+    if (isSignedIn) {
+      navigate(path);
+    } else {
+      navigate("/login");
     }
+    setMenuOpen(false);
   };
 
   return (
     <nav className="navbar">
-      {/* Logo Section */}
+      {/* Left Section: Logo */}
       <div className="logo-container">
         <img src={logo} alt="Logo" className="logo" />
         <h1 className="brand-name">FUTURE COMPASS</h1>
       </div>
 
-      {/* Desktop Navigation */}
+      {/* Center: Navigation Links */}
       <ul className={`nav-links ${menuOpen ? "show-menu" : ""}`}>
         <li><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></li>
-        <li><Link to="/courses" onClick={() => setMenuOpen(false)}>COURSES</Link></li>
-        <li><Link to="/contact" onClick={() => setMenuOpen(false)}>COLLEGES</Link></li>
+        <li><span onClick={() => handleProtectedClick("/courses")} className="nav-link">COURSES</span></li>
+        <li><span onClick={() => handleProtectedClick("/contact")} className="nav-link">COLLEGES</span></li>
         <li><Link to="/about" onClick={() => setMenuOpen(false)}>CONTACT</Link></li>
+
+        {/* Mobile Authentication Section - Only in Mobile Menu */}
+        {menuOpen && (
+          <div className="mobile-auth">
+            {isSignedIn ? (
+              <div className="user-info">
+                <span className="user-name">Hi, {user?.username || "User"}!</span>
+
+                <SignOutButton>
+                  <button className="signout-btn">Sign Out</button>
+                </SignOutButton>
+              </div>
+            ) : (
+              <>
+                <Link to="/login" className="login-btn" onClick={() => setMenuOpen(false)}>Login</Link>
+                <Link to="/register" className="register-btn" onClick={() => setMenuOpen(false)}>Register</Link>
+              </>
+            )}
+          </div>
+        )}
       </ul>
 
-      {/* Auth Section for Desktop */}
-      <div className="auth-buttons">
-        {user ? (
-          <button onClick={handleLogout} className="logout-btn">LOGOUT</button>
-        ) : (
-          <>
-            <Link to="/login" className="login-btn">Login</Link>
-            <Link to="/register" className="register-btn">Register</Link>
-          </>
-        )}
-      </div>
+      {/* Right Section: Authentication (Only for Desktop) */}
+      {!menuOpen && (
+        <div className="auth-section">
+          {isSignedIn ? (
+            <div className="user-info">
+             <span className="user-name">Hi, {user?.username || "User"}!</span>
 
-      {/* Hamburger Menu Button (Mobile) */}
+              <SignOutButton>
+                <button className="signout-btn">Sign Out</button>
+              </SignOutButton>
+            </div>
+          ) : (
+            <div className="auth-buttons">
+              <Link to="/login" className="login-btn">Login</Link>
+              <Link to="/register" className="register-btn">Register</Link>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Mobile Menu Button */}
       <div className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <FaTimes /> : <FaBars />}
       </div>
 
-      {/* Background Blur Overlay */}
-      <div className={`blur-overlay ${menuOpen ? "show" : ""}`} onClick={() => setMenuOpen(false)}></div>
-
-      {/* Mobile Navigation */}
-      <ul className={`nav-links-mobile ${menuOpen ? "show" : ""}`}>
-        {/* Close Button */}
-        <span className="close-btn" onClick={() => setMenuOpen(false)}>
-          <FaTimes />
-        </span>
-
-        <li><Link to="/" onClick={() => setMenuOpen(false)}>HOME</Link></li>
-        <li><Link to="/courses" onClick={() => setMenuOpen(false)}>COURSES</Link></li>
-        <li><Link to="/contact" onClick={() => setMenuOpen(false)}>COLLEGES</Link></li>
-        <li><Link to="/about" onClick={() => setMenuOpen(false)}>CONTACT</Link></li>
-        {user ? (
-          <li><button onClick={handleLogout} className="logout-btn">LOGOUT</button></li>
-        ) : (
-          <>
-            <li><Link to="/login" onClick={() => setMenuOpen(false)}>LOGIN</Link></li>
-            <li><Link to="/register" onClick={() => setMenuOpen(false)}>REGISTER</Link></li>
-          </>
-        )}
-      </ul>
+      {/* Close Menu on Background Click */}
+      {menuOpen && <div className="blur-overlay" onClick={() => setMenuOpen(false)}></div>}
     </nav>
   );
 };

@@ -9,19 +9,19 @@ const StatsSection = () => {
       <div className="stats-container">
         <div className="stat-box">
           <h3>
-            <CountUp start={0} end={50} duration={3} />+
+            <CountUp start={0} end={100} duration={3} />+
           </h3>
           <p>Colleges Listed</p>
         </div>
         <div className="stat-box">
           <h3>
-            <CountUp start={0} end={80} duration={3} separator="," />+
+            <CountUp start={0} end={500} duration={3} separator="," />+
           </h3>
           <p>Students Guided</p>
         </div>
         <div className="stat-box">
           <h3>
-            <CountUp start={0} end={100} duration={3} />+
+            <CountUp start={0} end={200} duration={3} />+
           </h3>
           <p>Courses Available</p>
         </div>

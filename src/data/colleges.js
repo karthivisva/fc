@@ -3,7 +3,7 @@ const colleges = [
           title: "RP Sarathy Institute of Technology",
           subtitle: "Premier Technical College",
           description: "Known for its strong technical programs and research initiatives",
-          link1: "https://www.rpsit.edu.in/",
+          link1: "https://www.rpsit.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {

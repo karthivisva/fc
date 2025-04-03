@@ -17,7 +17,7 @@ const colleges = [
           title: "Paaval Group of Institutions",
           subtitle: "Reputed Engineering College",
           description: "Offers quality education in engineering with a strong focus on industry connections",
-          link1: "https://www.paaval.edu.in/",
+          link1: "https://pct.paavai.edu.in/",
           link2: "https://www.shiksha.com/"
         },
         {

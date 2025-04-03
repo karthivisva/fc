@@ -87,70 +87,70 @@ const colleges = [
           title: "The Kavery Group of Institutions",
           subtitle: "Reputed Engineering College",
           description: "Known for excellence in technical education and research",
-          link1: "https://www.kaverygroup.edu.in/",
+          link1: "https://www.kavery.org.in/engg/index.aspx",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Sengundhar Group of Institutions",
           subtitle: "Top Educational Group",
           description: "Known for its engineering and management programs",
-          link1: "https://www.sengundharedn.edu.in/",
+          link1: "https://www.sect.edu.in/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Selvam College of Technology",
           subtitle: "Emerging Engineering Institution",
           description: "Provides strong academic foundation with industry tie-ups",
-          link1: "https://www.selvamtech.edu.in/",
+          link1: "https://selvamtech.edu.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Vivekanandha Group of Institutions (Women's)",
           subtitle: "Leading Women's Engineering College",
           description: "Offers a wide range of programs focused on empowering women in technology",
-          link1: "https://www.vivekanandha.edu.in/",
+          link1: "https://vcenggw.ac.in/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "JKK Nataraja Group of Institutions",
           subtitle: "Top Private Engineering College",
           description: "Known for excellence in education and strong industry connections",
-          link1: "https://www.jkkcet.edu.in/",
+          link1: "https://engg.jkkn.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "JKK Muniraja Group of Institutions",
           subtitle: "Renowned Educational Institution",
           description: "Offers top-quality engineering, management, and arts education",
-          link1: "https://www.jkkedu.org/",
+          link1: "https://jkkm.info/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "S.S.M Group of Institutions",
           subtitle: "Premier Educational Institution",
           description: "Provides diverse courses with excellent faculty and infrastructure",
-          link1: "https://www.ssminstitutions.edu.in/",
+          link1: "https://www.ssmengg.edu.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Jayam Engineering College, Dharmapuri",
           subtitle: "Top Engineering College",
           description: "Known for its engineering programs and strong placement opportunities",
-          link1: "https://www.jayamengg.edu.in/",
+          link1: "https://jet.jcet.ac.in/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Venkateswara Group of Institutions",
           subtitle: "Reputed Multi-Disciplinary College",
           description: "Offers engineering, medical, and management programs",
-          link1: "https://www.venkateswara.edu.in/",
+          link1: "https://www.srivenkateswara.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Erode Sengunthar Engineering College",
           subtitle: "Top Engineering College",
           description: "Provides excellent education with strong research initiatives",
-          link1: "https://www.esec.ac.in/",
+          link1: "https://erode-sengunthar.ac.in/",
           link2: "https://www.nirfindia.org/"
         },
       

@@ -24,63 +24,63 @@ const colleges = [
           title: "Mahendra Group of Institutions",
           subtitle: "Emerging Multi-Disciplinary Institute",
           description: "Provides courses in engineering, management, and applied sciences",
-          link1: "https://www.mahendragroup.edu.in/",
+          link1: "https://mahendra.org/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Muthayammal Engineering College",
           subtitle: "Top Private Engineering College",
           description: "Offers quality education in various engineering disciplines",
-          link1: "https://www.muthayammal.edu.in/",
+          link1: "https://mec.edu.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Annapoorana Engineering College & Medical",
           subtitle: "Renowned Educational Institution",
           description: "Offers a wide range of courses in engineering and medical fields",
-          link1: "https://www.annapoorana.edu.in/",
+          link1: "https://aecsalem.edu.in/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Gnanamani Group of Institutions",
           subtitle: "Leading Educational Group",
           description: "Known for its comprehensive technical and medical education programs",
-          link1: "https://www.gnanamani.edu.in/",
+          link1: "https://gct.org.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Excel Group of Institutions",
           subtitle: "Top Educational Group",
           description: "Offers a diverse range of courses with a focus on industry relevance",
-          link1: "https://www.excel.edu.in/",
+          link1: "https://excelinstitutions.com/excel_engg/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "KSR Group of Institutions",
           subtitle: "Reputed Engineering & Management Institution",
           description: "Offers cutting-edge education and research opportunities",
-          link1: "https://www.ksr.edu.in/",
+          link1: "https://www.ksrct.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Salem College of Engineering & Technology",
           subtitle: "Emerging Engineering College",
           description: "Provides quality education with a strong focus on placement support",
-          link1: "https://www.salemcet.edu.in/",
+          link1: "https://salemcollege.org/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Ganesh Group of Institutions",
           subtitle: "Premier Technical Institution",
           description: "Offers UG and PG programs in engineering and technology fields",
-          link1: "https://www.ganeshcollege.edu.in/",
+          link1: "https://ganeshenggcollege.org/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "AVS Group of Institutions",
           subtitle: "Reputed Educational Group",
           description: "Provides quality technical education with industry support",
-          link1: "https://www.avsgroup.edu.in/",
+          link1: "https://avscollege.in/#:~:text=AVS%20College%20of%20Arts%20and%20Science%2C%20Shri%20Sakthikailash%20College%2C%20AVS,School(CBSE)%20are%20the%20other",
           link2: "https://www.nirfindia.org/"
         },
         {

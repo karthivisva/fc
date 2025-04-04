@@ -165,21 +165,21 @@ const colleges = [
           title: "PSG Group of Institutions",
           subtitle: "Top Technical and Research Institute",
           description: "Renowned for its quality education and research in various fields",
-          link1: "https://www.psgtech.edu/",
+          link1: "https://www.psgtech.ac.in",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Karpagam Group of Institutions",
           subtitle: "Premier Multi-Disciplinary Institution",
           description: "Offers diverse courses in engineering, medical, and arts streams",
-          link1: "https://karpagam.ac.in/",
+          link1: " https://kahedu.edu.in/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Kumaraguru Group of Institutions",
           subtitle: "Top Engineering and Management Institute",
           description: "Highly ranked for its innovative curriculum and placements",
-          link1: "https://www.kct.ac.in/",
+          link1: "https://kct.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {
@@ -193,84 +193,84 @@ const colleges = [
           title: "Hindusthan Group of Institutions",
           subtitle: "Reputed Private Educational Institution",
           description: "Offers a wide range of technical, medical, and arts programs",
-          link1: "https://www.hindusthan.net/",
+          link1: "https://hicet.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Sri Krishna College of Engineering & Tech.",
           subtitle: "Top-Ranked Autonomous College",
           description: "Known for innovation, research, and high placement records",
-          link1: "https://www.skcet.ac.in/",
+          link1: "https://skcet.ac.in/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Ramakrishna Group of Institutions",
           subtitle: "Renowned Engineering & Medical Institution",
           description: "Offers top-quality education in multiple disciplines",
-          link1: "https://www.srit.org/",
+          link1: "https://srec.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "KGISL Group of Institutions",
           subtitle: "Emerging IT and Engineering College",
           description: "Specializes in IT and technical education with strong industry links",
-          link1: "https://www.kgisliim.ac.in/",
+          link1: "https://www.kgkite.ac.in/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Dhanalakshmi Group of Institutions",
           subtitle: "Reputed Private Engineering Institution",
           description: "Provides quality education with strong placement support",
-          link1: "https://www.dhanech.edu.in/",
+          link1: "https://www.dsengg.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Adithya Group of Institution",
           subtitle: "Top Emerging Technical Institution",
           description: "Known for its innovative teaching methods and industry collaborations",
-          link1: "https://www.adithyatech.edu.in/",
+          link1: "https://adithyatech.edu.in",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Nehru Group of Institutions",
           subtitle: "Renowned Multi-Disciplinary Institution",
           description: "Provides various UG and PG programs with industry-oriented training",
-          link1: "https://www.nehrucolleges.com/",
+          link1: "https://nehrucolleges.org/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Esha College of Engineering",
           subtitle: "Reputed Engineering College",
           description: "Provides top-quality engineering programs with good placements",
-          link1: "https://www.eshatech.edu.in/",
+          link1: " https://www.easacollege.com/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Dr. NGP Group of Institutions",
           subtitle: "Top Medical & Engineering Institute",
           description: "Offers technical, medical, and management education with excellent faculty",
-          link1: "https://www.drngpasc.ac.in/",
+          link1: "https://www.drngpit.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Rathinam Group of Institution",
           subtitle: "Top Multi-Disciplinary Institution",
           description: "Recognized for quality education and strong industry collaboration",
-          link1: "https://www.rathinamcollege.edu.in/",
+          link1: "https://rathinamtechnicalcampus.com/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "RVS Group of Institutions",
           subtitle: "Renowned Technical and Medical Institution",
           description: "Offers a wide range of courses in engineering, management, and medicine",
-          link1: "https://www.rvsgroup.com/",
+          link1: "https://rvscet.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Info Institute of Technology",
           subtitle: "Emerging Engineering Institution",
           description: "Provides cutting-edge education in engineering and technology",
-          link1: "https://www.infoengg.com/",
+          link1: " https://www.infoengg.com/",
           link2: "https://www.nirfindia.org/"
         },
         {
@@ -298,7 +298,7 @@ const colleges = [
           title: "Study World Group of Institution",
           subtitle: "Multi-Disciplinary Educational Institution",
           description: "Offers courses in engineering, management, and health sciences",
-          link1: "https://www.studyworldgroup.com/",
+          link1: " https://www.studyworldgroup.com/",
           link2: "https://www.nirfindia.org/"
         },
         {
@@ -312,7 +312,7 @@ const colleges = [
           title: "PPG Group of Institution",
           subtitle: "Leading Medical and Engineering Institution",
           description: "Offers a diverse range of programs in medicine, engineering, and management",
-          link1: "https://www.ppg.edu.in/",
+          link1: " https://www.ppg.edu.in/",
           link2: "https://www.nirfindia.org/"
         },
         {
@@ -326,7 +326,7 @@ const colleges = [
           title: "Sri Sakthi College of Engineering & Tech.",
           subtitle: "Reputed Engineering Institution",
           description: "Offers innovative technical education with industry connections",
-          link1: "https://www.srisakthi.ac.in/",
+          link1: "https://www.siet.ac.in/",
           link2: "https://www.nirfindia.org/"
         },
         {
@@ -341,7 +341,7 @@ const colleges = [
           title: "Vinayaka Mission Group of Institution",
           subtitle: "Renowned Private Educational Institution",
           description: "Offers diverse courses in engineering, medical, and management fields",
-          link1: "https://www.vinayakamission.com/",
+          link1: "https://vmrfdu.edu.in/",
           link2: "https://www.shiksha.com/"
         },
         {
@@ -362,63 +362,63 @@ const colleges = [
           title: "Panimalar Group of Institutions",
           subtitle: "Prominent Technical Institution",
           description: "Recognized for academic excellence and campus placements",
-          link1: "https://www.panimalar.ac.in/",
+          link1: "https://panimalar.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Meenakchi Group of Institution",
           subtitle: "Premier Multi-Disciplinary Institution",
           description: "Offers medical, engineering, and arts programs",
-          link1: "https://www.maher.ac.in/",
+          link1: "https://maher.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Balaji Group of Institution",
           subtitle: "Leading Higher Education Provider",
           description: "Provides courses in engineering, medical, and management studies",
-          link1: "https://www.balaji.edu.in/",
+          link1: "https://balajiinstitutes.in/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Vals Group of Institutions",
           subtitle: "Emerging Technical and Medical College",
           description: "A growing institution with a focus on quality education",
-          link1: "https://www.valsuniversity.com/",
+          link1: "https://velsgroup.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Bharath Group of Institutions",
           subtitle: "Reputed Private University",
           description: "Offers a wide range of undergraduate and postgraduate programs",
-          link1: "https://www.bharathuniv.ac.in/",
+          link1: "https://bharathinstitutions.com/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Saveetha Group of Institution",
           subtitle: "Top Medical & Engineering College",
           description: "Known for excellence in medical, engineering, and law studies",
-          link1: "https://www.saveetha.com/",
+          link1: "https://www.saveetha.com/institutions",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Chettinad Medical & Dental College",
           subtitle: "Top Medical & Dental Institution",
           description: "Offers world-class medical and dental education",
-          link1: "https://www.chettinadhealthcity.com/",
+          link1: "https://care.edu.in/",
           link2: "https://www.nirfindia.org/"
         },
         {
           title: "Laxmi Narayanan Medical & Dental College",
           subtitle: "Renowned Medical Institution",
           description: "Provides high-quality medical and dental education",
-          link1: "https://www.lnmch.ac.in/",
+          link1: " https://slims.ac.in/",
           link2: "https://www.shiksha.com/"
         },
         {
           title: "Manakula Vinayagar Medical & Dental College",
           subtitle: "Premier Medical and Dental College",
           description: "Known for excellent healthcare education and research",
-          link1: "https://www.mvmc.ac.in/",
+          link1: "https://smvmch.ac.in/",
           link2: "https://www.nirfindia.org/"
         },{
     title: "IIT Madras",

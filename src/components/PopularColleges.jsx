@@ -12,9 +12,9 @@ import image3 from "../images/img.3.jpg";
 import image4 from "../images/img.4.jpg";
 
 const popularColleges = [
-  { name: "", course: "", image: image1, link: "https://www.iitm.ac.in/" },
+  { name: "", course: "", image: image1, link: "https://www.rpsit.ac.in/" },
   { name: "", course: "", image: image2, link: "https://www.annauniv.edu/" },
-  { name: "", course: "", image: image3, link: "https://www.psgtech.edu/" },
+  { name: "", course: "", image: image3, link: "https://www.rpsit.ac.in/" },
   { name: "", course: "", image: image4, link: "https://www.srmist.edu.in/" },
 ];
 
